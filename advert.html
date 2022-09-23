@@ -122,6 +122,40 @@
       width: 100%;
     }
 
+    /* Company section */
+    .company-section {
+      background-color: var(--blue);
+      padding: 1rem 0;
+      margin: 3rem 0;
+      color: var(--white);
+    }
+
+    .company-sec-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .company-sec-wrapper img {
+      width: 100%;
+    }
+
+    .company-img-sec {
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      right: 0;
+      top: -60px;
+      background: white;
+      display: flex;
+      border: 1px solid var(--grey);
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.3rem;
+      padding: 0.8rem;
+    }
+
     /* Advert Details Section */
     .advert-details-content {
       display: grid;
@@ -264,6 +298,21 @@
 </head>
 
 <body>
+
+  <section class="company-section">
+    <div class="container">
+      <div class="company-sec-wrapper">
+        <div>
+          <h2>Adidas</h2>
+        </div>
+        <div class="company-img-sec">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/2560px-Adidas_Logo.svg.png"
+            alt="company logo">
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="advert-details-container">
     <div class="container">
