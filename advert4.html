@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advert</title>
+  <link rel="stylesheet" href="./css/advert.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    :root {
+      --grey-blue: #788aa1;
+      --grey-blue-l-1: #ebedf1;
+      --blue: #225fac;
+      --blue-l-1: #c6e0ff;
+      --blue-d-1: #1a4a86;
+      --blue-d-2: #13355f;
+      --white: #fff;
+      --white-d-1: #f5f5f5;
+      --white-d-2: #f5f8fc;
+      --orange: #ff9c00;
+      --orange-l-1: #ffac29;
+      --orange-l-2: #fff0d9;
+      --orange-d-1: #d18000;
+      --grey: #ededed;
+      --grey-d-1: #77838e;
+      --green: #15be53;
+      --green-l-1: #d7eadc;
+      --green-d-1: #129341;
+      --green-d-2: #06d853;
+      --green-d-3: #06d85315;
+      --black: #000;
+      --dark: #263238;
+      --red: #ff4040;
+      --red-d-1: #d72e2e;
+      --bg: #f6f7f9;
+      --deepwhite: #d3d6d7;
+      --lgwhite: #f5f8fc;
+      --black: #333;
+      --black: #000;
+      --lgblack: #abafc21f;
+      --dpblack: #263238;
+      --grey: #eee;
+      --deepgray: rgb(185, 185, 185);
+      --shadow: rgba(149, 157, 165, 0.2) 0 0.5rem 1.5rem;
+    }
+
+    /* Reuseable component */
+    ul {
+      list-style: none;
+    }
+
+    a {
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    /* Buttons */
+
+    .btn {
+      font-size: 0.875rem;
+      display: flex;
+      font-weight: 500;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      color: var(--white) !important;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      justify-content: center;
+      box-shadow: inset 0 0 10px rgb(0 0 0 / 10%);
+      white-space: nowrap;
+      font-family: "Outfit", sans-serif;
+    }
+
+    .btn-outline {
+      font-size: 0.875rem;
+      display: flex;
+      font-weight: 500;
+      align-items: center;
+      padding: calc(0.5rem - 1px) calc(1rem - 1px);
+      border-radius: 2rem;
+      cursor: pointer;
+      outline: none;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    .btn-outline-blue {
+      border: 1px solid var(--blue);
+      color: var(--blue);
+      background: transparent;
+    }
+
+    .btn-outline-blue:hover {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* Advert Details Section */
+    .advert-details-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    }
+
+    .advert-details-content>div {
+      padding: 1rem;
+    }
+
+    .advert-details-inner-content span {
+      color: var(--green);
+      margin-top: 1rem;
+      display: inline-block;
+    }
+
+    .status-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 1.5rem;
+    }
+
+    .pricing-lists {
+      margin-top: 2rem;
+    }
+
+    .pricing-lists h3 {
+      margin: 0.5rem 0;
+    }
+
+    .pricing-lists .price {
+      color: var(--blue);
+    }
+
+    .more-details-content {
+      padding: 1rem;
+      border: 1px solid var(--grey);
+      border-radius: 5px;
+    }
+
+    .more-details-content h3 {
+      color: var(--blue);
+    }
+
+    .more-details-content button {
+      margin-top: 1rem;
+    }
+
+    .btn-list {
+      margin-top: 1rem;
+    }
+
+    .btn-list li {
+      border: 1px solid var(--grey);
+      border-radius: 5px;
+      margin-top: 0.5rem;
+    }
+
+    .btn-list li a {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 0.75rem;
+      grid-gap: 0.75rem;
+      transition: all .2s;
+      color: var(--dark);
+      cursor: pointer;
+
+    }
+
+    .content-img-box {
+      padding: 0.5rem;
+    }
+
+    .content-img-box>img {
+      border-radius: 0.5rem;
+    }
+
+    .content-img-wrapper {
+      margin-top: 2.5rem;
+    }
+
+    .content-inner-img-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .content-img-slider-wrapper {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 140px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      gap: 0.25rem;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      background-color: var(--grey);
+      margin-top: 1rem;
+    }
+
+    .content-img-slider-wrapper img {
+      width: 120px;
+    }
+
+    .details-section-box {
+      margin-bottom: 1rem;
+    }
+
+    .details-section-box h3 {
+      padding: 0.5rem 0;
+      cursor: pointer;
+    }
+
+    .details-section-box .details-desc {
+      margin-top: 0.5rem;
+    }
+
+    /* .details-section-box .details-desc {
+      display: none;
+    }
+
+    .details-section-box .show {
+      display: block;
+    } */
+
+    @media screen and (max-width: 900px) {
+      .advert-details-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .status-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <section class="advert-details-container">
+    <div class="container">
+      <div class="advert-details-content">
+        <div class="advert-details-inner-content">
+          <h2>Personal Training Bootcamp Business For Sale In Norwich</h2>
+          <span>Location</span>
+          <div class="status-container">
+            <div class="status-content">
+              <h3>STATUS</h3>
+              <p>For Sale</p>
+            </div>
+            <div class="status-content">
+              <h3>STATUS</h3>
+              <p>For Sale</p>
+            </div>
+            <div class="status-content">
+              <h3>STATUS</h3>
+              <p>For Sale</p>
+            </div>
+            <div class="status-content">
+              <h3>STATUS</h3>
+              <p>For Sale</p>
+            </div>
+            <div class="status-content">
+              <h3>STATUS</h3>
+              <p>For Sale</p>
+            </div>
+            <div class="status-content">
+              <h3>STATUS</h3>
+              <p>For Sale</p>
+            </div>
+          </div>
+          <div class="pricing-lists">
+            <h3>Asking Price: <span class="price">£27,000</span></h3>
+            <h3>Asking Price: <span class="price">£27,000</span></h3>
+            <h3>Asking Price: <span class="price">£27,000</span></h3>
+            <h3>Asking Price: <span class="price">£27,000</span></h3>
+          </div>
+
+          <div class="content-img-wrapper">
+            <div class="content-img-box">
+              <img src="https://img.rightbiz.co.uk/listings/1/598263.jpg?t=1662632233" alt="">
+              <div class="content-inner-img-wrapper">
+                <div class="content-img-slider-wrapper">
+                  <img src="https://img.rightbiz.co.uk/listings/1/598263.jpg?t=1662632233" alt="">
+                  <img src="https://img.rightbiz.co.uk/listings/1/598263.jpg?t=1662632233" alt="">
+                  <img src="https://img.rightbiz.co.uk/listings/1/598263.jpg?t=1662632233" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+        <div>
+          <div class="more-details-content">
+            <h3>Contact the seller of more details, or booking a viewing</h3>
+            <button class="btn-outline btn-outline-blue">Contact Seller</button>
+            <ul class="btn-list">
+              <li>
+                <a href="#">Share</a>
+              </li>
+              <li>
+                <a href="#">Download</a>
+              </li>
+              <li>
+                <a href="#">Save</a>
+              </li>
+              <li>
+                <a href="#">Print</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="details-section">
+          <div class="details-section-box">
+            <h3 class="title">Business Details</h3>
+            <div class="details-desc">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi laboriosam, cumque reiciendis
+              accusamus eos atque exercitationem libero nesciunt eveniet dignissimos qui quos impedit, placeat,
+              voluptate dicta. Possimus, nesciunt nam1.
+            </div>
+          </div>
+
+          <div class="details-section-box">
+            <h3 class="title">Contact Agent</h3>
+            <div class="details-desc">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi laboriosam, cumque reiciendis
+              accusamus eos atque exercitationem libero nesciunt eveniet dignissimos qui quos impedit, placeat,
+              voluptate dicta. Possimus, nesciunt nam2.
+            </div>
+          </div>
+
+          <div class="details-section-box">
+            <h3 class="title">Listing Statistics</h3>
+            <div class="details-desc">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi laboriosam, cumque reiciendis
+              accusamus eos atque exercitationem libero nesciunt eveniet dignissimos qui quos impedit, placeat,
+              voluptate dicta. Possimus, nesciunt nam3.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>
