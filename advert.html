@@ -312,6 +312,17 @@
       display: block;
     }
 
+    .details-desc-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .details-desc-content h4 {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
     @media screen and (max-width: 900px) {
       .advert-details-content {
         grid-template-columns: 1fr;
@@ -340,6 +351,10 @@
 
       .status-container {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .details-desc-container {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -462,27 +477,80 @@
             <h3 class="title">Business Details <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
                 <path d="m12 15.375-6-6 1.4-1.4 4.6 4.6 4.6-4.6 1.4 1.4Z" /></svg></h3>
             <div class="details-desc">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi laboriosam, cumque reiciendis
-              accusamus eos atque exercitationem libero nesciunt eveniet dignissimos qui quos impedit, placeat,
-              voluptate dicta. Possimus, nesciunt nam1.
+              Well established Italian Restaurant, very rare opportunity to purchase a spacious 56 indoor and 12 outdoor
+              seating eatery. The area has a very high footfall with local residents, students and many tourists
+              visiting the city all year round. Nearby they have the Windsor Park Stadium, serviced apartments and
+              hotels in the local area. This is a family run business which has an excellent reputation for the quality
+              of its food and built up a very strong customer trade.
+              The owner of the business is retiring and would be an exciting new venture for the buyer, the restaurant
+              has stunning decoration with a great friendly and welcoming atmosphere.
+              This restaurant has high performance scores and great customer feedback.
+              All units are fitted to a high standard with good quality fittings and décor throughout as well as high
+              grade equipment.
             </div>
           </div>
           <div class="details-section-box">
             <h3 class="title">Contact Agent <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
                 <path d="m12 15.375-6-6 1.4-1.4 4.6 4.6 4.6-4.6 1.4 1.4Z" /></svg></h3>
             <div class="details-desc">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi laboriosam, cumque reiciendis
-              accusamus eos atque exercitationem libero nesciunt eveniet dignissimos qui quos impedit, placeat,
-              voluptate dicta. Possimus, nesciunt nam2.
+              <div class="details-desc-container">
+                <div class="details-desc-content">
+                  <h4>Telephone:</h4>
+                  <p>Registered members</p>
+                </div>
+                <div class="details-desc-content">
+                  <h4>Agent Name:</h4>
+                  <p>Registered members</p>
+                </div>
+                <div class="details-desc-content">
+                  <h4>Advert Reference</h4>
+                  <p>LD11774 / Rightbiz</p>
+                </div>
+                <div class="details-desc-content">
+                  <h4>Email:</h4>
+                  <a href="#">Registered members</a>
+                </div>
+              </div>
             </div>
           </div>
           <div class="details-section-box">
             <h3 class="title">Listing Statistics <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
                 <path d="m12 15.375-6-6 1.4-1.4 4.6 4.6 4.6-4.6 1.4 1.4Z" /></svg></h3>
             <div class="details-desc">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi laboriosam, cumque reiciendis
-              accusamus eos atque exercitationem libero nesciunt eveniet dignissimos qui quos impedit, placeat,
-              voluptate dicta. Possimus, nesciunt nam3.
+              <div class="details-desc-container">
+                <div class="details-desc-content">
+                  <h4>Impressions:</h4>
+                  <a href="#">Registered members</a>
+                </div>
+                <div class="details-desc-content">
+                  <h4>Views:</h4>
+                  <a href="#">Registered members</a>
+                </div>
+                <div class="details-desc-content">
+                  <h4>Enquiries:</h4>
+                  <a href="#">Registered members</a>
+                </div>
+                <div class="details-desc-content">
+                  <h4>Interested:</h4>
+                  <a href="#">Registered members</a>
+                </div>
+                <div class="details-desc-content">
+                  <h4>Watching:</h4>
+                  <a href="#">Registered members</a>
+                </div>
+                <div class="details-desc-content">
+                  <h4>Last Viewed:</h4>
+                  <a href="#">Registered members</a>
+                </div>
+                <div class="details-desc-content">
+                  <h4>Last Updated:</h4>
+                  <a href="#">Registered members</a>
+                </div>
+                <div class="details-desc-content">
+                  <h4>Last Enquiry Received:</h4>
+                  <a href="#">Registered members</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
