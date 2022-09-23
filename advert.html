@@ -205,15 +205,46 @@
       margin-top: 2.5rem;
     }
 
+    .content-inner-img-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
     .content-img-slider-wrapper {
-      display: flex;
-      margin-top: 0.5rem;
-      gap: 0.5rem;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 140px;
       overflow-x: auto;
+      scrollbar-width: none;
+      gap: 0.25rem;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      background-color: var(--grey);
     }
 
     .content-img-slider-wrapper img {
       width: 120px;
+    }
+
+    .details-section-box {
+      margin-bottom: 1rem;
+    }
+
+    .details-section-box h3 {
+      padding: 0.5rem 0;
+      cursor: pointer;
+    }
+
+    .details-section-box .details-desc {
+      margin-top: 0.5rem;
+    }
+
+    .details-section-box .details-desc {
+      display: none;
+    }
+
+    .details-section-box .show {
+      display: block;
     }
 
     @media screen and (max-width: 900px) {
@@ -275,10 +306,12 @@
           <div class="content-img-wrapper">
             <div class="content-img-box">
               <img src="https://img.rightbiz.co.uk/listings/1/598263.jpg?t=1662632233" alt="">
-              <div class="content-img-slider-wrapper">
-                <img src="https://img.rightbiz.co.uk/listings/1/598263.jpg?t=1662632233" alt="">
-                <img src="https://img.rightbiz.co.uk/listings/1/598263.jpg?t=1662632233" alt="">
-                <img src="https://img.rightbiz.co.uk/listings/1/598263.jpg?t=1662632233" alt="">
+              <div class="content-inner-img-wrapper">
+                <div class="content-img-slider-wrapper">
+                  <img src="https://img.rightbiz.co.uk/listings/1/598263.jpg?t=1662632233" alt="">
+                  <img src="https://img.rightbiz.co.uk/listings/1/598263.jpg?t=1662632233" alt="">
+                  <img src="https://img.rightbiz.co.uk/listings/1/598263.jpg?t=1662632233" alt="">
+                </div>
               </div>
             </div>
           </div>
@@ -306,9 +339,40 @@
             </ul>
           </div>
         </div>
+
+        <div class="details-section">
+          <div class="details-section-box">
+            <h3 class="title">Business Details</h3>
+            <div class="details-desc">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi laboriosam, cumque reiciendis
+              accusamus eos atque exercitationem libero nesciunt eveniet dignissimos qui quos impedit, placeat,
+              voluptate dicta. Possimus, nesciunt nam1.
+            </div>
+          </div>
+
+          <div class="details-section-box">
+            <h3 class="title">Contact Agent</h3>
+            <div class="details-desc">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi laboriosam, cumque reiciendis
+              accusamus eos atque exercitationem libero nesciunt eveniet dignissimos qui quos impedit, placeat,
+              voluptate dicta. Possimus, nesciunt nam2.
+            </div>
+          </div>
+
+          <div class="details-section-box">
+            <h3 class="title">Listing Statistics</h3>
+            <div class="details-desc">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi laboriosam, cumque reiciendis
+              accusamus eos atque exercitationem libero nesciunt eveniet dignissimos qui quos impedit, placeat,
+              voluptate dicta. Possimus, nesciunt nam3.
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <script src="./js/index.js"></script>
 
 </body>
 
