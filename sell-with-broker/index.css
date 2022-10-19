@@ -92,6 +92,7 @@ section {
   background: var(--blue);
   padding: 2rem 0;
   color: var(--white);
+  height: 400px;
 }
 
 .hero-section h1 {
@@ -113,6 +114,7 @@ form {
   color: var(--black);
   padding: 2rem;
   border-radius: 0.3rem;
+  box-shadow: -7px 7px 14px -3px rgba(0, 0, 0, 0.1);
 }
 
 form h2 {
@@ -152,6 +154,12 @@ input[type="submit"] {
 }
 
 /* seller desc section */
+.seller-section {
+  padding-top: 25rem;
+  padding-bottom: 2rem;
+}
+
+
 .seller-desc-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
