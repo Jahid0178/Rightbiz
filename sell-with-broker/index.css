@@ -197,8 +197,16 @@ input[type="submit"] {
 /* responsive */
 
 @media only screen and (max-width: 992px) {
+  .hero-section {
+    height: auto;
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
+  }
+
+  .seller-section {
+    padding: 2rem 0;
   }
 
   .seller-desc-container {
